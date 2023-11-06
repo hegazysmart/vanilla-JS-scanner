@@ -1,5 +1,11 @@
 const html5QrCode = new Html5Qrcode("reader");
-const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+// Use a percentage of the screen width for the QR box size.
+const qrBoxSize = Math.min(window.innerWidth, window.innerHeight) * 0.6;
+const config = { 
+  fps: 10, 
+  qrbox: qrBoxSize // Use a dynamic value for the QR box size
+};
+
 let scanning = false;
 
 document.getElementById('start-button').addEventListener('click', () => {
