@@ -1,5 +1,5 @@
 const html5QrCode = new Html5Qrcode("reader");
-const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+const config = { fps: 10, qrbox: { width: 300, height: 300 } };
 let scanning = false;
 
 document.getElementById('start-button').addEventListener('click', () => {
